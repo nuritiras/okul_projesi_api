@@ -51,8 +51,6 @@ Sunucu çalıştıktan sonra:
 * **API Uç Noktası (Endpoint):** `http://127.0.0.1:8000/api/ogrenciler/` adreslerinden projeye erişebilirsiniz.
 * <img width="1097" height="1074" alt="image" src="https://github.com/user-attachments/assets/8d49842d-1a9a-4394-b4ef-e40a554c2ac8" />
 
-* <img width="1275" height="855" alt="Ekran Görüntüsü 2026-03-26 10-14-26" src="https://github.com/user-attachments/assets/7f7c76be-508b-4fa7-8e67-d1a690d2934b" />
-
 ```
 
 ---
