@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Öğrenci Formu</title></head>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+    <h2>{% if object %}Öğrenciyi Güncelle{% else %}Yeni Öğrenci Ekle{% endif %}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" style="padding: 8px 15px; background: blue; color: white;">Kaydet</button>
+        <a href="{% url 'ogrenci_liste' %}">İptal</a>
+    </form>
+</body>
+</html>

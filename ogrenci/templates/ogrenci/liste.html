@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Öğrenci Sistemi</title></head>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+    <h2>Öğrenci Listesi</h2>
+    <a href="{% url 'ogrenci_ekle' %}" style="padding: 10px; background: green; color: white; text-decoration: none;">+ Yeni Öğrenci Ekle</a>
+    <br><br>
+    <table border="1" cellpadding="10" cellspacing="0" width="100%">
+        <tr><th>Ad</th><th>Soyad</th><th>Numara</th><th>İşlemler</th></tr>
+        {% for ogrenci in ogrenciler %}
+        <tr>
+            <td>{{ ogrenci.ad }}</td><td>{{ ogrenci.soyad }}</td><td>{{ ogrenci.numara }}</td>
+            <td>
+                <a href="{% url 'ogrenci_guncelle' ogrenci.id %}">Düzenle</a> | 
+                <a href="{% url 'ogrenci_sil' ogrenci.id %}" style="color: red;">Sil</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="4">Kayıtlı öğrenci yok.</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

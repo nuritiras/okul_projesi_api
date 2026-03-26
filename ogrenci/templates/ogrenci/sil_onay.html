@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Silme Onayı</title></head>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+    <h2>Emin misiniz?</h2>
+    <p><strong>{{ object.ad }} {{ object.soyad }}</strong> isimli öğrenciyi silmek istediğinize emin misiniz?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" style="padding: 8px 15px; background: red; color: white;">Evet, Sil</button>
+        <a href="{% url 'ogrenci_liste' %}">İptal</a>
+    </form>
+</body>
+</html>
